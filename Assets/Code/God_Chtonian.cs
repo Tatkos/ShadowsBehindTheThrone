@@ -12,7 +12,7 @@ namespace Assets.Code
 
         public God_Chtonian()
         {
-
+            powers.Add(new Ab_Chtonian_BuildCitadel());
         }
 
         public override string getDescFlavour()
