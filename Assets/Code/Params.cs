@@ -451,6 +451,10 @@ namespace Assets.Code
         public int unit_rd_redDeathPlagueImmunityDur = 16;
         public int unit_rd_redDeathMilCapHit = -10;
 
+        //Chtonian params
+        public double chtonianThreatMult = 1.5;
+        public double chtonian_armyStrength = 12;
+
         public void saveToFile()
         {
             StreamWriter writer = new StreamWriter(".\\params.txt");
