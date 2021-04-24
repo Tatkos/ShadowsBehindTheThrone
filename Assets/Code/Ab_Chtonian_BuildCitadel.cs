@@ -32,7 +32,7 @@ namespace Assets.Code
 
             map.world.prefabStore.popImgMsg(
                 "You call your children to return from hiding and build a great citadel. They will build up an army and send out infiltrators to soften up nearby humans for conquest."
-                + "\nYou may instruct your children what to do next",
+                + "\nYou may instruct your children what to do next.",
                 map.world.wordStore.lookup("UNHOLY_FLESH_SEED")); //TODO <- look up what this does
         }
 
