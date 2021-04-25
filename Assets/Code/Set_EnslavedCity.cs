@@ -6,9 +6,9 @@ using UnityEngine;
 
 namespace Assets.Code
 {
-    public class Set_ChtonianCitadel : Settlement
+    public class Set_EnslavedCity : Settlement
     {
-        public Set_ChtonianCitadel(Location loc) : base(loc)
+        public Set_EnslavedCity(Location loc) : base(loc)
         {
             this.isHuman = false;
             name = "Chtonian Citadel";
