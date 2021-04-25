@@ -100,7 +100,7 @@ namespace Assets.Code
             potentialGods.Add(new God_Flesh());
             potentialGods.Add(new God_WintersScythe());
             potentialGods.Add(new God_DeepOnes());
-            potentialGods.Add(new God_Chtonian());
+            potentialGods.Add(new God_Chthonian());
             potentialGods.Add(new God_Omni());
 
             AchievementManager.setup();

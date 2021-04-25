@@ -6,13 +6,13 @@ using UnityEngine;
 namespace Assets.Code
 {
 
-    public class God_Chtonian : God
+    public class God_Chthonian : God
     {
         public List<Ability> powers = new List<Ability>();
 
-        public God_Chtonian()
+        public God_Chthonian()
         {
-            powers.Add(new Ab_Chtonian_BuildCitadel());
+            powers.Add(new Ab_Chthonian_BuildCitadel());
         }
 
         public override string getDescFlavour()

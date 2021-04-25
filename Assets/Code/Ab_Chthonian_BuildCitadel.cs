@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Assets.Code
 {
-    public class Ab_Chtonian_BuildCitadel: Ability
+    public class Ab_Chthonian_BuildCitadel: Ability
     {
         public override void cast(Map map, Hex hex)
         {
@@ -28,7 +28,7 @@ namespace Assets.Code
                 hex.location.soc = soc;
             }
 
-            hex.location.settlement = new Set_ChtonianCitadel(hex.location);
+            hex.location.settlement = new Set_ChthonianCitadel(hex.location);
 
             map.world.prefabStore.popImgMsg(
                 "You call your children to return from hiding and build a great citadel. They will build up an army and send out infiltrators to soften up nearby humans for conquest."
@@ -55,7 +55,7 @@ namespace Assets.Code
         {
             foreach (Location loc in map.locations)
             {
-                if (loc.settlement is Set_ChtonianCitadel)
+                if (loc.settlement is Set_ChthonianCitadel)
                 {
                     Debug.Log("Chtonian citadel found.");
                     return true;

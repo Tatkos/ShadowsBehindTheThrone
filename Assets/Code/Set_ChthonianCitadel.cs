@@ -6,12 +6,12 @@ using UnityEngine;
 
 namespace Assets.Code
 {
-    public class Set_ChtonianCitadel : Settlement
+    public class Set_ChthonianCitadel : Settlement
     {
-        public Set_ChtonianCitadel(Location loc) : base(loc)
+        public Set_ChthonianCitadel(Location loc) : base(loc)
         {
             this.isHuman = false;
-            name = "Chtonian Citadel";
+            name = "Chthonian Citadel";
 
             defensiveStrengthMax = 20;
             militaryCapAdd += loc.map.param.chtonian_armyStrength;
