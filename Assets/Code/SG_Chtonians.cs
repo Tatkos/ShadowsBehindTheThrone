@@ -30,6 +30,7 @@ namespace Assets.Code
             if (u.society.isDark()) { return false; }
             return !u.isEnthralled();
         }
+        
 
         public override bool isDark()
         {
