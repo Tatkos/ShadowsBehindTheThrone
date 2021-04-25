@@ -15,7 +15,7 @@ namespace Assets.Code
 
             defensiveStrengthMax = 12;
             militaryCapAdd += loc.map.param.chtonian_slavearmyStrength;
-            militaryRegenAdd = 3;
+            militaryRegenAdd = 1;
         }
 
         public override Sprite getCustomTerrain(Hex hex)
