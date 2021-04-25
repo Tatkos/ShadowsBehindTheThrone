@@ -11,7 +11,7 @@ namespace Assets.Code
         public Overmind overmind;
         public Map map;
 
-        public enum aiMode { TESTDARK, FLESH,FLESH_ONLY ,FOG,COLD, CHTONIAN};
+        public enum aiMode { TESTDARK, FLESH,FLESH_ONLY ,FOG,COLD, CHTHONIAN};
 
         public aiMode currentMode = aiMode.TESTDARK;
 
@@ -45,7 +45,7 @@ namespace Assets.Code
             {
                 ai_testCold();
             }
-            if (currentMode == aiMode.CHTONIAN)
+            if (currentMode == aiMode.CHTHONIAN)
             {
                 ai_testChtonian();
             }
@@ -266,21 +266,31 @@ namespace Assets.Code
             int c = 0;
             int c2 = 0;
             Location citadelLoc = null;
-           // if (SG_Chtonians.hasCitadelOnMap(overmind.map) == false) //TODO refactor to check if ChtonianCitadel is castable
-            //{
-              //  foreach (Location loc in overmind.map.locations)
-            //    {
-                //    if (loc.isOcean == false && loc.settlement == null && loc.soc == null)
-                  //  {
-                      //  c2 += 1;
-                    //    if (Eleven.random.Next(c2) == 0)
-                  //      {
-                  //          citadelLoc = loc;
-                  //      }
-                  //  }
-               // }
+            Ab_Chthonian_BuildCitadel abBuildCitadel = new Ab_Chthonian_BuildCitadel();
+
+
+
+            if (abBuildCitadel.hasCitadelOnMap(overmind.map) == false) //TODO refactor to check if ChtonianCitadel is castable
+            {
+                foreach (Location loc in overmind.map.locations)
+                {
+                    if (loc.isOcean == false && loc.settlement == null && loc.soc == null)
+                    {
+                        c2 += 1;
+                       if (Eleven.random.Next(c2) == 0)
+                     {
+                           citadelLoc = loc;
+                        }
+                    }
+                }
                 //Cast Ab_Chtonian_BuildCitadel on citadelLoc!
-           // }
+
+                if (citadelLoc != null)
+                {
+                    abBuildCitadel.cast(overmind.map, citadelLoc.hex);
+                }
+
+            }
            
         }
 
@@ -436,6 +446,7 @@ namespace Assets.Code
             msgs.Add("Flesh Only");
             msgs.Add("Fog");
             msgs.Add("Cold");
+            msgs.Add("Chthonian");
             overmind.map.world.ui.addBlocker(overmind.map.world.prefabStore.getScrollSetText(msgs, false, this).gameObject);
         }
 
@@ -446,7 +457,7 @@ namespace Assets.Code
             if (text == "Flesh Only") { currentMode = aiMode.FLESH_ONLY; }
             if (text == "Fog") { currentMode = aiMode.FOG; }
             if (text == "Cold") { currentMode = aiMode.COLD; }
-            if (text == "Chtonian") { currentMode = aiMode.CHTONIAN; }
+            if (text == "Chthonian") { currentMode = aiMode.CHTHONIAN; }
             World.log("AI mode is set to " + currentMode);
 
             map.world.prefabStore.popMsgTreeBackground("Welcome to the automatic testing interface. This allows games to be played automatically, with both the human and the dark sides played "
