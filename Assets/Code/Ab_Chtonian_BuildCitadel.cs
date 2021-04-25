@@ -47,7 +47,22 @@ namespace Assets.Code
             if (hex.location.soc != null) { return false; }
             if (hex.location.settlement != null) { return false; }
             if (hex.location.isOcean) { return false; }
+            if (hasCitadelOnMap (map) == true) { return false; } 
             return true;
+        }
+
+        public bool hasCitadelOnMap(Map map)
+        {
+            foreach (Location loc in map.locations)
+            {
+                if (loc.settlement is Set_ChtonianCitadel)
+                {
+                    Debug.Log("Chtonian citadel found.");
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public override int getCost()
