@@ -19,7 +19,7 @@ namespace Assets.Code
                 (float)(Eleven.random.NextDouble() * colourReducer) + (1 - colourReducer),
                 (float)Eleven.random.NextDouble() * colourReducer,
                 (float)Eleven.random.NextDouble() * colourReducer);
-            this.setName("Chtonians from " + startingLocation.shortName);
+            this.setName("Chthonians from " + startingLocation.shortName);
 
             startingLocation.soc = this;
             this.threat_mult = map.param.chtonianThreatMult;
@@ -42,7 +42,7 @@ namespace Assets.Code
         }
         public override string getTypeDesc()
         {
-            return "A nation of Chtonians to aid you in your bid to plunge the world to darkness.";
+            return "A nation of Chthonians to aid you in your bid to plunge the world to darkness.";
         }
         public override void turnTick()
         {
