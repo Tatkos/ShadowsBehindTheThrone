@@ -76,8 +76,8 @@ namespace Assets.Code
                 {
                     taken.person().die("Sacrificed by the Chtonians as they overran " + taken.getName(), true);
                 }
-                //taken.settlement = new Set_UnholyFlesh_Ganglion(taken);
-                taken.settlement.fallIntoRuin();
+                taken.settlement = new Set_EnslavedCity(taken);
+                //taken.settlement.fallIntoRuin();
             }
         }
     }
