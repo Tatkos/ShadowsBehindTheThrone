@@ -11,24 +11,24 @@ namespace Assets.Code
             if (!castable(map, hex)) { return; }
 
 
-            SG_UnholyFlesh soc = null;
+            SG_Chtonians soc = null;
             foreach (SocialGroup sg in map.socialGroups) //this seems to find the freshly created soc
             {
-                if (sg is SG_UnholyFlesh) //TODO <- look up what this does
+                if (sg is SG_Chtonians) //TODO <- look up what this does
                 {
-                    soc = (SG_UnholyFlesh)sg; //TODO <- look up what this does
+                    soc = (SG_Chtonians)sg; //TODO <- look up what this does
                 }
             }
             if (soc == null)
             {
-                map.socialGroups.Add(new SG_UnholyFlesh(map, hex.location)); //TODO <- look up what this does
+                map.socialGroups.Add(new SG_Chtonians(map, hex.location)); 
             }
             else
             {
                 hex.location.soc = soc;
             }
 
-            hex.location.settlement = new Set_UnholyFlesh_Seed(hex.location); //TODO <- look up what this does
+            hex.location.settlement = new Set_ChtonianCitadel(hex.location);
 
             map.world.prefabStore.popImgMsg(
                 "You call your children to return from hiding and build a great citadel. They will build up an army and send out infiltrators to soften up nearby humans for conquest."

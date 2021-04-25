@@ -13,7 +13,7 @@ namespace Assets.Code
             this.isHuman = false;
             name = "Chtonian Citadel";
 
-            defensiveStrengthMax = 100;
+            defensiveStrengthMax = 20;
             militaryCapAdd += loc.map.param.chtonian_armyStrength;
             militaryRegenAdd = 3;
         }
