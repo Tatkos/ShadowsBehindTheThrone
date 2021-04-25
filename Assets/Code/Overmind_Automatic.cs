@@ -265,9 +265,7 @@ namespace Assets.Code
 
             int c = 0;
             int c2 = 0;
-            Location expandLoc = null;
             Location citadelLoc = null;
-            Location parentExpand = null;
            // if (SG_Chtonians.hasCitadelOnMap(overmind.map) == false) //TODO refactor to check if ChtonianCitadel is castable
             //{
               //  foreach (Location loc in overmind.map.locations)
@@ -448,6 +446,7 @@ namespace Assets.Code
             if (text == "Flesh Only") { currentMode = aiMode.FLESH_ONLY; }
             if (text == "Fog") { currentMode = aiMode.FOG; }
             if (text == "Cold") { currentMode = aiMode.COLD; }
+            if (text == "Chtonian") { currentMode = aiMode.CHTONIAN; }
             World.log("AI mode is set to " + currentMode);
 
             map.world.prefabStore.popMsgTreeBackground("Welcome to the automatic testing interface. This allows games to be played automatically, with both the human and the dark sides played "
