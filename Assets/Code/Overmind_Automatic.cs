@@ -266,71 +266,24 @@ namespace Assets.Code
             int c = 0;
             int c2 = 0;
             Location expandLoc = null;
-            Location growLoc = null;
+            Location citadelLoc = null;
             Location parentExpand = null;
-            foreach (Location loc in overmind.map.locations)
-            {
-                if (loc.soc is SG_UnholyFlesh)
-                {
-                    foreach (Location l2 in loc.getNeighbours())
-                    {
-                        if (l2.isOcean == false && l2.soc == null && l2.settlement == null)
-                        {
-                            c += 1;
-                            if (Eleven.random.Next(c) == 0)
-                            {
-                                expandLoc = l2;
-                                parentExpand = loc;
-                            }
-                        }
-                        else if (l2.soc is Society && l2.soc.currentMilitary < loc.soc.currentMilitary)
-                        {
-                            if (loc.soc.isAtWar() == false)
-                            {
-                                overmind.map.declareWar(loc.soc, l2.soc);
-                            }
-                        }
-                    }
-                }
-                else if (loc.isOcean == false && loc.settlement == null && loc.soc == null)
-                {
-                    c2 += 1;
-                    if (Eleven.random.Next(c2) == 0)
-                    {
-                        growLoc = loc;
-                    }
-                }
-            }
-            if (expandLoc != null)
-            {
-                expandLoc.soc = parentExpand.soc;
-                expandLoc.settlement = new Set_UnholyFlesh_Ganglion(expandLoc);
-                expandLoc.soc.temporaryThreat += overmind.map.param.ability_growFleshThreatAdd;
-                overmind.power -= map.param.ability_fleshGrowCost;
-            }
-            else if (growLoc != null)
-            {
-
-                SG_UnholyFlesh soc = null;
-                foreach (SocialGroup sg in map.socialGroups)
-                {
-                    if (sg is SG_UnholyFlesh)
-                    {
-                        soc = (SG_UnholyFlesh)sg;
-                    }
-                }
-                if (soc == null)
-                {
-                    map.socialGroups.Add(new SG_UnholyFlesh(map, growLoc));
-                }
-                else
-                {
-                    growLoc.soc = soc;
-                }
-
-                growLoc.settlement = new Set_UnholyFlesh_Seed(growLoc);
-                overmind.power -= map.param.ability_fleshSeedCost;
-            }
+           // if (SG_Chtonians.hasCitadelOnMap(overmind.map) == false) //TODO refactor to check if ChtonianCitadel is castable
+            //{
+              //  foreach (Location loc in overmind.map.locations)
+            //    {
+                //    if (loc.isOcean == false && loc.settlement == null && loc.soc == null)
+                  //  {
+                      //  c2 += 1;
+                    //    if (Eleven.random.Next(c2) == 0)
+                  //      {
+                  //          citadelLoc = loc;
+                  //      }
+                  //  }
+               // }
+                //Cast Ab_Chtonian_BuildCitadel on citadelLoc!
+           // }
+           
         }
 
         public void checkSpawnAgent()
@@ -502,3 +455,5 @@ namespace Assets.Code
         }
     }
 }
+
+
