@@ -270,7 +270,7 @@ namespace Assets.Code
 
 
 
-            if (abBuildCitadel.hasCitadelOnMap(overmind.map) == false) //TODO refactor to check if ChtonianCitadel is castable
+            if (abBuildCitadel.hasCitadelOnMap(overmind.map) == false)
             {
                 foreach (Location loc in overmind.map.locations)
                 {
@@ -283,7 +283,6 @@ namespace Assets.Code
                         }
                     }
                 }
-                //Cast Ab_Chtonian_BuildCitadel on citadelLoc!
 
                 if (citadelLoc != null)
                 {
