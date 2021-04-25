@@ -24,13 +24,13 @@ namespace Assets.Code
         public override string getDescMechanics()
         {
             return "This Name works by creating a an allied quasi-nation that will offer flexible help infiltrating or conquering human nations." +
-                " If the Chtonians conquer a human settlement, they enslave the humans and recruit them into their armies at a penalty." +
+                " If the Chthonians conquer a human settlement, they enslave the humans and recruit them into their armies at a penalty." +
                 "\n\nShould you be killed, your children will try to defend and hold out until you return.";
         }
 
         public override string getName()
         {
-            return "Chtonian Progenitor";
+            return "Chthonian Progenitor";
         }
 
         public override Sprite getGodBackground(World world)
