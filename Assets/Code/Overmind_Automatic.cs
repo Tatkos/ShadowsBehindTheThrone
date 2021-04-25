@@ -268,8 +268,6 @@ namespace Assets.Code
             Location citadelLoc = null;
             Ab_Chthonian_BuildCitadel abBuildCitadel = new Ab_Chthonian_BuildCitadel();
 
-
-
             if (abBuildCitadel.hasCitadelOnMap(overmind.map) == false)
             {
                 foreach (Location loc in overmind.map.locations)
@@ -278,7 +276,7 @@ namespace Assets.Code
                     {
                         c2 += 1;
                        if (Eleven.random.Next(c2) == 0)
-                     {
+                        {
                            citadelLoc = loc;
                         }
                     }
