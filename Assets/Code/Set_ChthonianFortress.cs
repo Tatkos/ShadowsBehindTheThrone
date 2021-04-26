@@ -6,9 +6,9 @@ using UnityEngine;
 
 namespace Assets.Code
 {
-    public class Set_ChthonianCitadel : Settlement
+    public class Set_ChthonianFortress : Settlement
     {
-        public Set_ChthonianCitadel(Location loc) : base(loc)
+        public Set_ChthonianFortress(Location loc) : base(loc)
         {
             this.isHuman = false;
             name = "Chthonian Citadel";
@@ -39,13 +39,6 @@ namespace Assets.Code
             foreach (Hex h in location.territory)
             {
                 h.flora = null;
-            }
-
-            //Create Infiltrator from the Citadel if one doesn't exist.
-            if (checkIfLinkedAgentIsAlive() == false)
-            {
-                // Debug.Log("Trying to create infiltrator...");
-                SpawnInfiltrator();
             }
 
         }
