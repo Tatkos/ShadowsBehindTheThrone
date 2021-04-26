@@ -39,11 +39,24 @@ namespace Assets.Code
             {
                 h.flora = null;
             }
+
+            if (checkIfLinkedAgentIsAlive() == false)
+            {
+                //TODO implement creating agent
+            }
+
         }
 
         public override Sprite getSprite()
         {
             return location.map.world.textureStore.loc_flesh; //TODO change sprite
+        }
+
+
+        public bool checkIfLinkedAgentIsAlive()
+        {
+
+            return true; //TODO implement check
         }
     }
 }
