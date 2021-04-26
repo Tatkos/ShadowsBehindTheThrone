@@ -9,8 +9,9 @@ namespace Assets.Code
     public class Unit_ChthonianInfiltrator : Unit
     {
 
-        public Unit_ChthonianInfiltrator(Location loc, SocialGroup soc) : base(loc, soc)
+        public Unit_ChthonianInfiltrator(Location loc, SocialGroup soc, Location homebase) : base(loc, soc)
         {
+            parentLocation = homebase;
             Debug.Log("Infiltrator constructor started!");
             maxHp = 5;
             hp = 5;

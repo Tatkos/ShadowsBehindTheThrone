@@ -16,7 +16,8 @@ namespace Assets.Code
             defensiveStrengthMax = 20;
             militaryCapAdd += loc.map.param.chtonian_armyStrength;
             militaryRegenAdd = 1;
-            Unit_ChthonianInfiltrator infiltrator = new Unit_ChthonianInfiltrator(location, location.soc);
+            //Spawn infiltrator with the base.
+            SpawnInfiltrator();
         }
 
         public override Sprite getCustomTerrain(Hex hex)
@@ -41,13 +42,11 @@ namespace Assets.Code
                 h.flora = null;
             }
 
-
             //Create Infiltrator from the Citadel if one doesn't exist.
             if (checkIfLinkedAgentIsAlive() == false)
             {
-                Debug.Log("Trying to create infiltrator...");
-                Unit_ChthonianInfiltrator infiltrator = new Unit_ChthonianInfiltrator(location, location.soc);
-
+               // Debug.Log("Trying to create infiltrator...");
+                SpawnInfiltrator();
             }
 
         }
@@ -57,19 +56,27 @@ namespace Assets.Code
             return location.map.world.textureStore.loc_flesh; //TODO change sprite
         }
 
+        public void SpawnInfiltrator()
+        {
+            Unit infiltrator = new Unit_ChthonianInfiltrator(location, location.map.soc_dark, location); //Test if the game goes off the rails if the chthonian civ owned the infiltrator!
+            infiltrator.person = new Person(location.map.soc_dark);
+            infiltrator.person.state = Person.personState.enthralledAgent;
+            infiltrator.person.unit = infiltrator;
+            location.map.units.Add(infiltrator);
+        }
 
         public bool checkIfLinkedAgentIsAlive()
         {
-            //foreach (Unit unit in World.staticMap.units) //Dear Bobby, if you ever see this, you can delete this line
+            
             foreach (Unit unit in location.map.units)
             {
                 if (unit.parentLocation == this.location)
                 {
-                    Debug.Log("LOCATION'S AGENT FOUND!");
+                    //Debug.Log("LOCATION'S AGENT FOUND!");
                     return true;
                 }
             }
-            Debug.Log("No agent found for location. :(");
+            //Debug.Log("No agent found for location. :(");
             return false;
         }
     }
