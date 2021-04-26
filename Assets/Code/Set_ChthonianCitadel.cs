@@ -45,9 +45,11 @@ namespace Assets.Code
             //Create Infiltrator from the Citadel if one doesn't exist.
             if (checkIfLinkedAgentIsAlive() == false)
             {
-               // Debug.Log("Trying to create infiltrator...");
+                // Debug.Log("Trying to create infiltrator...");
                 SpawnInfiltrator();
             }
+
+            BuildFortresses();
 
         }
 
@@ -67,7 +69,7 @@ namespace Assets.Code
 
         public bool checkIfLinkedAgentIsAlive()
         {
-            
+
             foreach (Unit unit in location.map.units)
             {
                 if (unit.parentLocation == this.location)
@@ -95,6 +97,19 @@ namespace Assets.Code
                 army.maxHp = (int)this.getMilitaryCap();
                 this.attachedUnit = army;
                 World.log("Created new Chthonian Army");
+            }
+        }
+
+        public void BuildFortresses()
+        {
+            foreach (Location loc in location.getNeighbours())
+            {
+                if (loc.settlement == null && loc.isOcean == false && Eleven.random.NextDouble() < 0.05)
+                {
+                    loc.settlement = new Set_ChthonianFortress(loc);
+                    loc.soc = this.location.soc;
+                }
+
             }
         }
     }

@@ -6,7 +6,8 @@ namespace Assets.Code
     public class SG_Chthonians : SocialGroup
     {
         public enum warStates { ATTACK, DEFEND };
-        public warStates warState = warStates.ATTACK;
+        public warStates warState = warStates.ATTACK; //TODO USE THESE STATES TO DETERMINE IF CHTHONIANS SHOULD COOP UP OR ATTACK
+                                                        //TODO Great code to reuse in Flesh_Ganglion!
 
         public SG_Chthonians(Map map, Location startingLocation) : base(map)
         {
