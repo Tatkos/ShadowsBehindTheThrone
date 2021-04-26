@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace Assets.Code
 {
-    public class SG_Chtonians : SocialGroup
+    public class SG_Chthonians : SocialGroup
     {
         public enum warStates { ATTACK, DEFEND };
         public warStates warState = warStates.ATTACK;
 
-        public SG_Chtonians(Map map, Location startingLocation) : base(map)
+        public SG_Chthonians(Map map, Location startingLocation) : base(map)
         {
             float colourReducer = 0.25f;
             color = new Color(

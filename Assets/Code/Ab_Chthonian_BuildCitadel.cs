@@ -11,17 +11,17 @@ namespace Assets.Code
             if (!castable(map, hex)) { return; }
 
 
-            SG_Chtonians soc = null;
+            SG_Chthonians soc = null;
             foreach (SocialGroup sg in map.socialGroups) //this seems to find the freshly created soc
             {
-                if (sg is SG_Chtonians) //TODO <- look up what this does
+                if (sg is SG_Chthonians) //TODO <- look up what this does
                 {
-                    soc = (SG_Chtonians)sg; //TODO <- look up what this does
+                    soc = (SG_Chthonians)sg; //TODO <- look up what this does
                 }
             }
             if (soc == null)
             {
-                map.socialGroups.Add(new SG_Chtonians(map, hex.location)); 
+                map.socialGroups.Add(new SG_Chthonians(map, hex.location)); 
             }
             else
             {
@@ -57,7 +57,7 @@ namespace Assets.Code
             {
                 if (loc.settlement is Set_ChthonianCitadel)
                 {
-                    Debug.Log("Chtonian citadel found.");
+                    Debug.Log("Chthonian citadel found.");
                     return true;
                 }
             }
@@ -78,7 +78,7 @@ namespace Assets.Code
 
         public override string getName()
         {
-            return "Build Chtonian Citadel";
+            return "Build Chthonian Citadel";
         }
 
         public override Sprite getSprite(Map map)
