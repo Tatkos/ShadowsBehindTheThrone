@@ -57,7 +57,7 @@ namespace Assets.Code
 
         public bool checkIfLinkedAgentIsAlive()
         {
-            //foreach (Unit unit in World.staticMap.units) //you can delete this line
+            //foreach (Unit unit in World.staticMap.units) //Dear Bobby, if you ever see this, you can delete this line
             foreach (Unit unit in location.map.units)
             {
                 if (unit.parentLocation == this.location)
