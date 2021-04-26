@@ -75,11 +75,13 @@ namespace Assets.Code
                         return;
                     }
                 }
-                else if (this.location.person().shadow < 1)
-                {
-                    this.task = new Task_SpreadShadow();
-                    return;
-                }
+
+                //Squids don't spread shadow
+                //else if (this.location.person().shadow < 1)
+                //{
+                //    this.task = new Task_SpreadShadow();
+                //    return;
+                //}
             }
 
             //We're not starting a new task, so this location is bad. Onwards to greener pastures
