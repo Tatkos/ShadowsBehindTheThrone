@@ -79,5 +79,23 @@ namespace Assets.Code
             //Debug.Log("No agent found for location. :(");
             return false;
         }
+
+        public override void checkUnitSpawning()
+        {
+            spawnCounter += 1;
+            if (spawnCounter > 5)
+            {
+                spawnCounter = 0;
+
+                if (this.attachedUnit != null) { throw new Exception(); }
+
+                if (location.soc is SG_Chthonians == false) { return; }
+                Unit_ChthonianArmy army = new Unit_ChthonianArmy(location, (SG_Chthonians)location.soc);
+                location.map.units.Add(army);
+                army.maxHp = (int)this.getMilitaryCap();
+                this.attachedUnit = army;
+                World.log("Created new Chthonian Army");
+            }
+        }
     }
 }
