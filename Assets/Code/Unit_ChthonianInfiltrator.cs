@@ -11,13 +11,14 @@ namespace Assets.Code
 
         public Unit_ChthonianInfiltrator(Location loc, SocialGroup soc) : base(loc, soc)
         {
+            Debug.Log("Infiltrator constructor started!");
             maxHp = 5;
             hp = 5;
         }
 
         public override void turnTickInner(Map map)
         {
-
+            Debug.Log("Infiltrator turnTickInner started!");
             if (this.movesTaken != 0) { return; }
             if (this.task is Task_GoToLocation) { return; }//Already moving or fleeing
 

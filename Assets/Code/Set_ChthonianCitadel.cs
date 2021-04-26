@@ -16,6 +16,7 @@ namespace Assets.Code
             defensiveStrengthMax = 20;
             militaryCapAdd += loc.map.param.chtonian_armyStrength;
             militaryRegenAdd = 1;
+            Unit_ChthonianInfiltrator infiltrator = new Unit_ChthonianInfiltrator(location, location.soc);
         }
 
         public override Sprite getCustomTerrain(Hex hex)
@@ -44,6 +45,7 @@ namespace Assets.Code
             //Create Infiltrator from the Citadel if one doesn't exist.
             if (checkIfLinkedAgentIsAlive() == false)
             {
+                Debug.Log("Trying to create infiltrator...");
                 Unit_ChthonianInfiltrator infiltrator = new Unit_ChthonianInfiltrator(location, location.soc);
 
             }
@@ -67,6 +69,7 @@ namespace Assets.Code
                     return true;
                 }
             }
+            Debug.Log("No agent found for location. :(");
             return false;
         }
     }
