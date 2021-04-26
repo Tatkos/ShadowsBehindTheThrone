@@ -14,7 +14,7 @@ namespace Assets.Code
             name = "Chthonian Citadel";
 
             defensiveStrengthMax = 20;
-            militaryCapAdd += loc.map.param.chtonian_armyStrength;
+            militaryCapAdd += loc.map.param.chthonian_armyStrength;
             militaryRegenAdd = 1;
             //Spawn infiltrator with the base.
             SpawnInfiltrator();

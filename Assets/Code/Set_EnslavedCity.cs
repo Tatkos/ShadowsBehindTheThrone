@@ -14,7 +14,7 @@ namespace Assets.Code
             name = "Chtonian Citadel";
 
             defensiveStrengthMax = 12;
-            militaryCapAdd += loc.map.param.chtonian_slavearmyStrength;
+            militaryCapAdd += loc.map.param.chthonian_slavearmyStrength;
             militaryRegenAdd = 1;
         }
 

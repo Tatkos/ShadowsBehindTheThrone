@@ -22,7 +22,7 @@ namespace Assets.Code
             this.setName("Chthonians from " + startingLocation.shortName);
 
             startingLocation.soc = this;
-            this.threat_mult = map.param.chtonianThreatMult;
+            this.threat_mult = map.param.chthonianThreatMult;
         }
 
         public override bool hostileTo(Unit u)
