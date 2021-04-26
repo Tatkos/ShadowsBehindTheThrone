@@ -9,8 +9,7 @@ namespace Assets.Code
     public class Unit_ChthonianInfiltrator : Unit
     {
 
-
-        public Unit_TesterDark(Location loc, SocialGroup soc) : base(loc, soc)
+        public Unit_ChthonianInfiltrator(Location loc, SocialGroup soc) : base(loc, soc)
         {
             maxHp = 5;
             hp = 5;
