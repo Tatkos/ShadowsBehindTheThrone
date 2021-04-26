@@ -40,10 +40,11 @@ namespace Assets.Code
                 h.flora = null;
             }
 
+
+            //Create Infiltrator from the Citadel if one doesn't exist.
             if (checkIfLinkedAgentIsAlive() == false)
             {
-                //TODO implement creating agent
-                
+                Unit_ChthonianInfiltrator infiltrator = new Unit_ChthonianInfiltrator(location, location.soc);
 
             }
 
