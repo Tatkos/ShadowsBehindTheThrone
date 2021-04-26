@@ -42,7 +42,6 @@ namespace Assets.Code
 
             if (checkIfLinkedAgentIsAlive() == false)
             {
-                bool agentFound = false;
                 //TODO implement creating agent
                 
 
@@ -60,9 +59,9 @@ namespace Assets.Code
         {
             foreach (Unit unit in World.staticMap.units)
             {
-                if (unit.parentLocation == this)
+                if (unit.parentLocation == this.location)
                 {
-                    Debug.Log("CHTHONIAN AGENT FOUND!");
+                    Debug.Log("LOCATION'S AGENT FOUND!");
                     return true;
                 }
             }
