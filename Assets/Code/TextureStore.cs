@@ -84,6 +84,10 @@ namespace Assets.Code
         public Sprite loc_flesh;
         public Sprite loc_corpseroot;
         public Sprite loc_old;
+        public Sprite loc_chthonian_citadel; //Munakoiso's addition
+        public Sprite loc_enslaved_city; //Munakoiso's addition
+        public Sprite loc_chthonian_fortress; //Munakoiso's addition
+
 
         public Sprite icon_enshadow;
         public Sprite icon_convert;
