@@ -453,7 +453,7 @@ namespace Assets.Code
 
         //Chtonian params
         public double chthonianThreatMult = 0.5;
-        public double chthonian_armyStrength = 10;
+        public double chthonian_armyStrength = 6;
         public double chthonian_slavearmyStrength = 6; // remember to change back to 6 or something!
 
         public void saveToFile()
