@@ -324,6 +324,10 @@ namespace Assets.Code
                 {
                     agent_Standard();
                 }
+                else if (currentMode == aiMode.CHTHONIAN)
+                {
+                    agent_Standard();
+                }
             }
         }
 
