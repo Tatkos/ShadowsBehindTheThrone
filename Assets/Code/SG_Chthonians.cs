@@ -31,7 +31,28 @@ namespace Assets.Code
             if (u.society.isDark()) { return false; }
             return !u.isEnthralled();
         }
-        
+
+        public void DeclareWarIfNeighborIsWeak()
+        {
+            foreach (Location loc in map.locations)
+            {
+                if (loc.soc is SG_Chthonians)
+                {
+                    foreach (Location l2 in loc.getNeighbours())
+                    {
+                        if (l2.soc is Society && l2.soc.currentMilitary < loc.soc.currentMilitary)
+                        {
+                            if (loc.soc.isAtWar() == false)
+                            {
+                                map.declareWar(loc.soc, l2.soc);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
 
         public override bool isDark()
         {
@@ -62,6 +83,8 @@ namespace Assets.Code
                     }
                 }
             }
+
+
         }
         public override bool hasEnthralled()
         {
