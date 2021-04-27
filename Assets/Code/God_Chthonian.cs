@@ -35,11 +35,11 @@ namespace Assets.Code
 
         public override Sprite getGodBackground(World world)
         {
-            return world.textureStore.painting_deathAndConflagaration;
+            return world.textureStore.painting_RhanTegoth;
         }
         public override string getCredits()
         {
-            return "The Death and conflagration, Albert Chmielowski, 1870s";
+            return "The Rhan-Tegoth, Borja Pindando";
         }
 
         public override List<Ability> getUniquePowers()

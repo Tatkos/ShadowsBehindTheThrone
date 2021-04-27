@@ -149,6 +149,7 @@ namespace Assets.Code
         public Sprite unit_apothecarian;
         public Sprite unit_saviour;
         public Sprite unit_inquisitor;
+        public Sprite unit_ChthonianArmy; //Munakoiso's addition
 
         public Sprite property_noDead;
         public Sprite property_forgottenSecret;
@@ -179,6 +180,7 @@ namespace Assets.Code
         public Sprite painting_deathAndConflagaration;
         public Sprite painting_monkAndOldWoman;
         public Sprite painting_processionInTheFog;
+        public Sprite painting_RhanTegoth;
 
         public Sprite special_horsemanLayer0;
         public Sprite special_horsemanLayer1;
