@@ -19,18 +19,18 @@ namespace Assets.Code
 
         }
 
-        public override Sprite getCustomTerrain(Hex hex)
-        {
-            int c = hex.graphicalIndexer % 2;
-            if (c == 0)
-            {
-                return World.staticMap.world.textureStore.hex_special_flesh; //TODO change sprite
-            }
-            else
-            {
-                return World.staticMap.world.textureStore.hex_special_flesh2; //TODO change sprite
-            }
-        }
+        //public override Sprite getCustomTerrain(Hex hex)
+        //{
+        //    int c = hex.graphicalIndexer % 2;
+        //    if (c == 0)
+        //    {
+        //        return World.staticMap.world.textureStore.hex_special_void1; //TODO change sprite
+        //    }
+        //    else
+        //    {
+        //        return World.staticMap.world.textureStore.hex_special_void2; //TODO change sprite
+        //    }
+        //}
 
         public override void turnTick()
         {

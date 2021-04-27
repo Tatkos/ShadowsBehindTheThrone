@@ -60,6 +60,14 @@ namespace Assets.Code
         public Sprite hex_special_flesh;
         public Sprite hex_special_flesh2;
 
+        //Munakoiso's additions
+        public Sprite hex_special_void1;
+        public Sprite hex_special_void2;
+        public Sprite hex_special_void3;
+        public Sprite hex_special_void4;
+        public Sprite hex_special_void5;
+
+
         public Sprite loc_empty;
         public Sprite loc_green;
         public Sprite loc_city_roman;
