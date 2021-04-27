@@ -71,7 +71,7 @@ namespace Assets.Code
                     if (location.settlement.security >= 5) { lockedDown = true; }
                     if (!lockedDown)
                     {
-                        this.task = new Task_Infiltrate();
+                        this.task = new Task_Infiltrate_Weak();
                         return;
                     }
                 }
