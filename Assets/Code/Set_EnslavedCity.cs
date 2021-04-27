@@ -13,9 +13,9 @@ namespace Assets.Code
             this.isHuman = false;
             name = "Enslaved City";
 
-            defensiveStrengthMax = 12;
+            defensiveStrengthMax = 5;
             militaryCapAdd += loc.map.param.chthonian_slavearmyStrength;
-            militaryRegenAdd = 1;
+            militaryRegenAdd = 3;
         }
 
         public override Sprite getCustomTerrain(Hex hex)

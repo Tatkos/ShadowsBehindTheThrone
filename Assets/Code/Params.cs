@@ -452,9 +452,9 @@ namespace Assets.Code
         public int unit_rd_redDeathMilCapHit = -10;
 
         //Chtonian params
-        public double chthonianThreatMult = -0.25; // Remember to change to 1.5!
-        public double chthonian_armyStrength = 20;
-        public double chthonian_slavearmyStrength = 20; // remember to change back to 6 or something!
+        public double chthonianThreatMult = 0.5;
+        public double chthonian_armyStrength = 10;
+        public double chthonian_slavearmyStrength = 6; // remember to change back to 6 or something!
 
         public void saveToFile()
         {
