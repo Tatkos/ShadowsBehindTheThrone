@@ -83,6 +83,7 @@ namespace Assets.Code
                     }
                 }
             }
+            DeclareWarIfNeighborIsWeak();
 
 
         }
