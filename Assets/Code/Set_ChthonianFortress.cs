@@ -47,7 +47,7 @@ namespace Assets.Code
 
         public override Sprite getSprite()
         {
-            return location.map.world.textureStore.loc_flesh; //TODO change sprite
+            return location.map.world.textureStore.loc_chthonian_fortress;
         }
 
         public override void checkUnitSpawning()
