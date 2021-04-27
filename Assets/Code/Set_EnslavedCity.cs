@@ -11,7 +11,7 @@ namespace Assets.Code
         public Set_EnslavedCity(Location loc) : base(loc)
         {
             this.isHuman = false;
-            name = "Chtonian Citadel";
+            name = "Enslaved City";
 
             defensiveStrengthMax = 12;
             militaryCapAdd += loc.map.param.chthonian_slavearmyStrength;
@@ -39,6 +39,8 @@ namespace Assets.Code
             {
                 h.flora = null;
             }
+
+            BuildFortresses();
         }
 
         public override Sprite getSprite()
@@ -61,6 +63,19 @@ namespace Assets.Code
                 army.maxHp = (int)this.getMilitaryCap();
                 this.attachedUnit = army;
                 World.log("Created new Chthonian Army");
+            }
+        }
+
+        public void BuildFortresses()
+        {
+            foreach (Location loc in location.getNeighbours())
+            {
+                if (loc.settlement == null && loc.isOcean == false && Eleven.random.NextDouble() < 0.05)
+                {
+                    loc.settlement = new Set_ChthonianFortress(loc);
+                    loc.soc = this.location.soc;
+                }
+
             }
         }
 
