@@ -176,7 +176,7 @@ namespace Assets.Code
 
         public override Sprite getSprite(World world)
         {
-            return world.textureStore.unit_fleshmaw;
+            return world.textureStore.unit_ChthonianArmy;
         }
 
         public override string getName()
@@ -197,7 +197,7 @@ namespace Assets.Code
 
         public override string getDesc()
         {
-            return "A mobile extension of the flesh, able to rise up and attack the neighbouring human settlements.";
+            return "Chthonian army, consists of Chthonians and human slaves.";
         }
 
         public override string getTitleM()
